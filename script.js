@@ -43,6 +43,7 @@ for (let i = 0; i < 81; i++) {
 
     cell.type = "text";
     cell.maxLength = 1;
+    cell.inputmode = "none";
 
     cell.classList.add("cell");
 
