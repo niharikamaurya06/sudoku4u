@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sudoku4u</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>sudoku4u</h1>
+
+    <div class="game-layout">
+
+        <div class="left-panel">
+
+            <div class="top-bar">
+
+                <div class="stats">
+                    <div class="time-stat">
+                        time:
+                        <span class="timer-row">
+                            <span id="timer">00:00</span>
+                            <button id="pauseTimerBtn" class="timer-control" type="button" aria-label="Pause timer">
+                                pause
+                            </button>
+                        </span>
+                    </div>
+                    <div>errors: <span id="errors">0</span></div>
+                </div>
+
+            </div>
+
+            <div id="board"></div>
+            <div id="number-bar"></div>
+
+            <div class="bottom-bar">
+                <button id="newGameBtn" class="action-btn">new game</button>
+                <button id="solveBtn" class="action-btn">solve</button>
+            </div>
+
+        </div>
+
+        <div class="right-panel">
+
+            <div class="custom-solver">
+
+                <h3>solve ur own :p</h3>
+
+                <p>
+                    enter exactly 81 digits; 0 for blank cells.
+                </p>
+
+                <textarea id="sudokuInput"
+                    placeholder="530070000600195000098000060800060003400803001700020006060000280000419005000080079">
+                </textarea>
+
+                <button id="customSolveBtn">
+                    solve
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="winModal" class="modal">
+        <div class="modal-wrapper">
+            <img id="yippeeGif" src="media/yippee.gif" alt="Yippee!">
+            <div class="modal-content">
+                <h2>🎉 puzzle solved! 🎉</h2>
+                <div class="modal-stats">
+                    <p>time: <span id="modalTime">00:00</span></p>
+                    <p>errors: <span id="modalErrors">0</span></p>
+                </div>
+                <button id="modalPlayAgainBtn" class="action-btn">play again</button>
+            </div>
+        </div>
+    </div>
+
+    <img id="catGif" src="media/laughing-cat.gif" alt="Laughing Cat">
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
